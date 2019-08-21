@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+int sele_sort(int a[],int n,int k);
+
+int main()
+{
+	int a[100],i,k,n;
+	cout<<"enter the size\n";
+	cin>>n;
+	cout<<"enter the element\n";
+	for(i=0;i<n;i++)
+		cin>>a[i];
+	cout<<"enter the kth\n";
+	cin>>k;
+	sele_sort(a,n,k);
+	cout<<"sorted list\n";
+	for(i=0;i<n;i++)
+	cout<<a[i]<<"\n";
+	cout<<"kth smallest element\n";
+	cout<<a[k-1]<<"\n";
+	return 0;
+}
+
+
+int sele_sort(int a[],int n,int k)
+{
+	int temp,min;
+	for(int i=0;i<k;i++)
+	{
+		min=i;
+		for(int j=i+1;j<n;j++)
+		{
+			if(a[j]<a[min])
+				min=j;
+		}
+		temp=a[i];
+		a[i]=a[min];
+		a[min]=temp;
+	}
+}
