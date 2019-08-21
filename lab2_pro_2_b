@@ -14,9 +14,6 @@ int main()
 	cout<<"enter the kth\n";
 	cin>>k;
 	bubble_sort(a,n,k);
-	cout<<"sorted element\n";
-	for(i=0;i<n;i++)
-	cout<<a[i]<<"\n";
 	return 0;
 }
 
