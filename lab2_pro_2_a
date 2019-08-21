@@ -14,9 +14,6 @@ int main()
 	cout<<"enter the kth\n";
 	cin>>k;
 	sele_sort(a,n,k);
-	cout<<"sorted list\n";
-	for(i=0;i<n;i++)
-	cout<<a[i]<<"\n";
 	cout<<"kth smallest element\n";
 	cout<<a[k-1]<<"\n";
 	return 0;
