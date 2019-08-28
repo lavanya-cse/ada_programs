@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int sele_sort(int a[],int n);
+
+int main()
+{
+	int a[100],i,n;
+	cout<<"enter the size\n";
+	cin>>n;
+	cout<<"enter the element\n";
+	for(i=0;i<n;i++)
+		cin>>a[i];
+	sele_sort(a,n);
+	cout<<"sorted array:\n";
+	for(i=0;i<n;i++)
+		cout<<a[i]<<"\n";
+	return 0;
+}
+
+
+int sele_sort(int a[],int n)
+{
+	int temp,min,count=0;
+	for(int i=0;i<n;i++)
+	{
+		min=i;
+		for(int j=i+1;j<n;j++)
+		{
+			count++;
+			if(a[j]<a[min])
+				min=j;
+		}
+		temp=a[i];
+		a[i]=a[min];
+		a[min]=temp;
+	}
+	cout<<"array comparision:"<<count<<"\n";
+}
