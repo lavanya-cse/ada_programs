@@ -1,0 +1,175 @@
+#include <iostream>
+using namespace std;
+
+int quick_sort(int a[],int low,int high);
+int partition(int a[],int low,int high);
+
+int main()
+{
+	int a[100],i,n,low,high;
+	cout<<"enter the size\n";
+	cin>>n;
+	cout<<"enter the element\n";
+	for(i=0;i<n;i++)
+		cin>>a[i];
+	low=0;
+	high=n;
+	quick_sort(a,low,high);
+	cout<<"sorted array:\n";
+	for(i=0;i<n;i++)
+		cout<<a[i]<<"\n";
+	return 0;
+}
+
+
+int quick_sort(int a[],int low,int high)
+{
+	int pivot;
+	if(low<high)
+	{
+		pivot=partition(a,low,high);
+		quick_sort(a,low,pivot-1);
+		quick_sort(a,pivot+1,high);
+	}
+}
+
+int partition(int a[],int low,i#include <iostream>
+using namespace std;
+
+int quick_sort(int a[],int low,int high);
+int partition(int a[],int low,int high);
+
+int main()
+{
+	int a[100],i,n,low,high;
+	cout<<"enter the size\n";
+	cin>>n;
+	cout<<"enter the element\n";
+	for(i=0;i<n;i++)
+		cin>>a[i];
+	low=0;
+	high=n;
+	quick_sort(a,low,high);
+	cout<<"sorted array:\n";
+	for(i=0;i<n;i++)
+		cout<<a[i]<<"\n";
+	return 0;
+}
+
+
+int quick_sort(int a[],int low,int high)
+{
+	int pivot;
+	if(low<high)
+	{
+		pivot=partition(a,low,high);
+		quick_sort(a,low,pivot-1);
+		quick_sort(a,pivot+1,high);
+	}
+}
+
+int partition(int a[],int low,int high)
+{
+	int i=low+1,p=a[low],j=high,temp;
+	
+	while(1)#include <iostream>
+using namespace std;
+
+int quick_sort(int a[],int low,int high);
+int partition(int a[],int low,int high);
+
+int main()
+{
+	int a[100],i,n,low,high;
+	cout<<"enter the size\n";
+	cin>>n;
+	cout<<"enter the element\n";
+	for(i=0;i<n;i++)
+		cin>>a[i];
+	low=0;
+	high=n;
+	quick_sort(a,low,high);
+	cout<<"sorted array:\n";
+	for(i=0;i<n;i++)
+		cout<<a[i]<<"\n";
+	return 0;
+}
+
+
+int quick_sort(int a[],int low,int high)
+{
+	int pivot;
+	if(low<high)
+	{
+		pivot=partition(a,low,high);
+		quick_sort(a,low,pivot-1);
+		quick_sort(a,pivot+1,high);
+	}
+}
+
+int partition(int a[],int low,int high)
+{
+	int i=low+1,p=a[low],j=high,temp;
+	
+	while(1)
+	{
+		while(a[i]<=p && i<=high)
+			i++;
+		while(a[j]>p && j>=low)
+			j--;
+		if(i<j)
+		{
+			temp=a[i];
+			a[i]=a[j];
+			a[j]=temp;
+		}
+		else
+		{
+				a[low]=a[j];
+				a[j]=p;
+				return j;
+		}
+	}
+}
+	{
+		while(a[i]<=p && i<=high)
+			i++;
+		while(a[j]>p && j>=low)
+			j--;
+		if(i<j)
+		{
+			temp=a[i];
+			a[i]=a[j];
+			a[j]=temp;
+		}
+		else
+		{
+				a[low]=a[j];
+				a[j]=p;
+				return j;
+		}
+	}
+}nt high)
+{
+	int i=low+1,p=a[low],j=high,temp;
+	
+	while(1)
+	{
+		while(a[i]<=p && i<=high)
+			i++;
+		while(a[j]>p && j>=low)
+			j--;
+		if(i<j)
+		{
+			temp=a[i];
+			a[i]=a[j];
+			a[j]=temp;
+		}
+		else
+		{
+				a[low]=a[j];
+				a[j]=p;
+				return j;
+		}
+	}
+}
